@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Pattaya&display=swap');
+
+
+/* section .container .row .lab{
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  align-items:flex-end;
+  text-align: end;
+
+} */
+.text-typing{
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  /* text-align: center; */
+  overflow: hidden;
+}
+
+.text-typing span.typed-text {
+  font-weight: normal;
+  color: #dd7732;
+}
+.text-typing span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.text-typing span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+
+
+
+section {
+  position: relative;
+  background-image: linear-gradient(
+    110deg,
+    #0c0f16 30%,
+    #00ff8866 50%,
+    #0c0f16 70%
+  );
+}
+section .header .row {
+  height: 90vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+
+/* ********** Slider ********* */
+section .container-fluid{
+  background-color: #0c0f16;
+  padding: 20px;
+}
+section .container-fluid .swiper-container{
+  transform-style: preserve-3d !important;
+}
+section .container-fluid .swiper-container .swiper-wrapper{
+  width: 300px;
+  height: 400px;
+  perspective: 10000px !important;
+}
+
+section .container-fluid .swiper-container .swiper-wrapper .swiper-slide {
+  border: none;
+  overflow: hidden;
+  height: 350px;
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  text-align: center;
+  background-color: #000;
+}
+section .container-fluid .swiper-container .swiper-wrapper .swiper-slide  img{
+  object-fit: cover;
+  filter: brightness(0.1);
+  transform: scale(1);
+  transition: 1s;
+  height: 100%;
+  width: 100%;
+}
+section .container-fluid .swiper-container .swiper-wrapper .swiper-slide-active  img{
+  filter: brightness(1) !important;
+  transform: scale(1.1);
+}
+section .container-fluid .swiper-container .swiper-wrapper .swiper-slide  .content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;      
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-shadow: 0px 0px 10px #000000;
+}
+.swiper-button-prev,.swiper-button-next{
+  font-weight: bolder;
+  color: #fff;
+  text-shadow: 0px 0px 10px #eee;
+}

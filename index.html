@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.css" />
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <style type="text/css"></style>
+  <script src="https://kit.fontawesome.com/9248ccec10.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bgs-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bgs-secondary p-0">
+    <div class="container-fluid border-bottom borders-secondary border-2">
+      <a class="navbar-brand fw-bolder p-3 ps-5" href="#"> 0o0 AVO </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="category.html">Category</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+        </ul>
+        <!-- <form action="#" class="d-flex ms-3 me-3">
+          <input class="
+                form-control
+                me-2
+                bg-dark
+                border border-secondary border-2
+                rounded-pill
+              " type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn rounded-pill bg-secondary">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form> -->
+        <ul class="navbar-nav social-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="container header">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 col-12 offset-0 text-center">
+          <p class="text-typing text-uppercase d-inline">
+            Coding is <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+          </p>
+        </div>
+        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+          <form action="#" class="d-flex ms-3 me-3">
+            <input class="
+                  form-control
+                  me-2
+                  bg-dark
+                  border border-secondary border-2
+                  rounded-pill
+                " type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn rounded-pill bg-light ph-1">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="swiper-container container">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+              <img src="https://picsum.photos/200?random=1" alt="alt" />
+              <div class="content">
+                <h3 class="fw-bolder border-bottom">Category 01</h3>
+                <a href="#" class="link-light text-decoration-none">Lorem ipsum dolor sit amet.</a>
+              </div>
+          </div>
+          
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+
+    <div class="model d-none">
+      <div class="container">
+        <div class="row bgs-dark p-4">
+          <h3 class="fw-bolder text-white">LAB</h3>
+
+          <div class="col-8">
+            <canvas style="background-color: rgb(0, 0, 0); width: 100%; min-height: 400px">
+            </canvas>
+          </div>
+          <div class="col-4">
+            <div class="form-header border-bottom">
+              <h3 class="fw-bolder text-white">Edit</h3>
+              <button class="btn btn-dark text-light" onclick="togglemodel()">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="form">
+              <div class="input-control mt-3">
+                <label for="line" class="text-white">Line</label><br />
+                <input type="range" value="10" max="100" step="5" class="input-group" />
+              </div>
+
+              <div class="input-control mt-3">
+                <label for="line" class="text-white">Circle</label><br />
+                <input type="range" value="10" max="100" step="10" class="input-group" />
+              </div>
+
+              <div class="input-control mt-3">
+                <label for="line" class="text-white">Triangles</label><br />
+                <input type="range" value="10" max="100" step="5" class="input-group" />
+              </div>
+
+              <div class="input-control mt-3">
+                <input type="button" value="Clear" class="btn btn-danger" />
+                <input type="button" value="Check" class="btn btn-success" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<script>
+  const typedTextSpan = document.querySelector(".typed-text");
+  const cursorSpan = document.querySelector(".cursor");
+
+  const textArray = ["hard", "fun", "a journey", "LIFE"];
+  const typingDelay = 200;
+  const erasingDelay = 100;
+  const newTextDelay = 2000;
+  let textArrayIndex = 0;
+  let charIndex = 0;
+
+  function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+      if (!cursorSpan.classList.contains("typing"))
+        cursorSpan.classList.add("typing");
+      typedTextSpan.textContent +=
+        textArray[textArrayIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingDelay);
+    } else {
+      cursorSpan.classList.remove("typing");
+      setTimeout(erase, newTextDelay);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      if (!cursorSpan.classList.contains("typing"))
+        cursorSpan.classList.add("typing");
+      typedTextSpan.textContent = textArray[textArrayIndex].substring(
+        0,
+        charIndex - 1
+      );
+      charIndex--;
+      setTimeout(erase, erasingDelay);
+    } else {
+      cursorSpan.classList.remove("typing");
+      textArrayIndex++;
+      if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+      setTimeout(type, typingDelay + 1100);
+    }
+  }
+  function togglemodel() {
+    $('.model').toggleClass('d-none');
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    if (textArray.length) setTimeout(type, newTextDelay + 250);
+  });
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".swiper-container", {
+    speed: 500,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    centeredSlides: true,
+    paginationClickable: true,
+    watchSlidesProgress: true,
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 15,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    },
+    1400: {
+      slidesPerView: 5,
+      spaceBetween: 40
+    }
+  }
+  });
+</script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+</html>

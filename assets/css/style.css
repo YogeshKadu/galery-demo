@@ -1,0 +1,23 @@
+.bgs-secondary{
+  background-color: #11141b !important;
+}
+.bgs-dark{
+  background-color: #0c0f16 !important;
+}
+.borders-secondary{
+  border-color: #3c3d43 !important;
+}
+.form-control:focus,
+.form-control{
+  color: #fff;
+  outline: none;
+}
+.social-nav{
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+/* .social-nav:after, */
+.social-nav:before{
+  content: '';
+  border-right: 2px solid var(--bs-secondary);
+}

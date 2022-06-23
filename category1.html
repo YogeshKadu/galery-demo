@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Category</title>
+		<link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<style type="text/css">
+			section{
+				display: grid;
+				grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+				grid-auto-rows: 250px;
+				grid-auto-flow: dense;
+				grid-gap: 25px;
+			}
+			section .feed{
+				position: relative;
+				overflow: hidden;
+				cursor: pointer;
+				border-radius: 10px;
+			}
+			section .feed:nth-child(7n+1) {
+				grid-column: span 2;
+				grid-row: span 2;
+			}
+			section .feed:nth-child(3n+1) {
+				/* grid-column: span 2; */
+				grid-row: span 2;
+			}
+
+			section .feed>img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: .25s;
+			}
+			section .feed:hover >img{
+				transform: scale(1.1);
+			}
+			.feed .profile{
+				position: absolute;
+				bottom: 0px;
+				padding: 10px 20px;
+				background-color: rgba(0, 0, 0, 0.5);
+				max-width: 100%;
+				width: 100%;
+				display: flex;
+				flex-wrap: initial;
+				color: #fff;
+				opacity: 0;
+				transition: .25s;
+			}
+			.feed:hover .profile{
+				opacity: 1;
+			}
+
+			.feed .profile .content{
+				display: flex;
+				justify-content: flex-start;
+				flex: auto;
+			}
+			/* .profile .social{
+				display: flex;
+				gap: 10px;
+				flex:100px;
+			} */
+
+			.feed .profile .content img{
+				border-radius: 10%;
+			}
+			.feed .profile .content h6{
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				margin: auto 20px;
+			}
+
+
+
+
+
+
+
+
+
+
+			/* viewer */
+			.viewer{
+				position: fixed;
+				top: 0;
+				left:0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: rgba(0, 0, 0, 0.9);
+			}
+
+			.viewer .container{
+				background-color: #fff;
+				position: relative;
+			}
+			.viewer .container .row .col .img{
+				overflow: hidden;
+			}
+			.viewer .container .row .col .img img{
+				width:100%;
+				height: 100%;
+				object-fit: cover;
+				transition: .25s;
+			}
+			.viewer .container .row .img:hover img{
+				transform: scale(1.1);
+			}
+			.viewer .container .row .content .profile{
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: center;
+
+			}
+			.viewer .container .row .content .profile img{
+				border-radius: 5px;
+			}
+			.viewer .container .row .content .close{
+				position: absolute;
+				top: 10px;
+				right: 10px;
+			}
+
+		</style>
+	</head>
+	<body class="bgs-dark">
+		<nav class="navbar navbar-expand-lg navbar-dark bgs-secondary p-0">
+			<div class="container-fluid border-bottom borders-secondary border-2">
+				<a class="navbar-brand fw-bolder p-3 ps-5" href="#"> 0o0 AVO </a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mb-2 mb-lg-0 ms-auto ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#"
+								>Category</a
+							>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="aboutus.html">About Us</a>
+						</li>
+					</ul>
+					<form action="#" class="d-flex ms-3 me-3">
+						<input
+							class="
+								form-control
+								me-2
+								bg-dark
+								border border-secondary border-2
+								rounded-pill
+							"
+							type="search"
+							placeholder="Search"
+							aria-label="Search"
+						/>
+						<button class="btn rounded-pill bg-secondary">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+					</form>
+					<ul class="navbar-nav social-nav">
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fa fa-youtube-play" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fa fa-linkedin" aria-hidden="true"></i>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fa fa-instagram" aria-hidden="true"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<section class="container-fluid">
+
+
+
+
+
+
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=0" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 0</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=1" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 1</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=2" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 2</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=3" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 3</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=4" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 4</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=5" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 5</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=6" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 6</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=7" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 7</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=8" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 8</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=9" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 9</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=10" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 10</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=11" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 11</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=12" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 12</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=13" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 13</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=14" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 14</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div class="feed">
+				<img src="https://picsum.photos/300/300?random=15" alt="img" class="main-img" />
+				<div class="profile">
+					<div class="content">
+						<img
+							src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png"
+							alt="user"
+							width="40"
+							height="40"
+							class="pro-img"
+						/>
+						<h6>Jhon Smith 15</h6>
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</section>
+	<footer>
+
+		<div class="viewer d-none">
+			<div class="container p-5">
+				<dow class="row">
+					<div class="col-sm-12 col-md-6 col">
+						<div class="img">
+							<img src="" alt="img" class="img">
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 content">
+						<div class="profile">
+							<img src="" alt="user" width="50px" height="50px" class="pro-img">
+							<h3 class="username fw-bolder m-3"></h3>
+						</div>
+						<button class="btn btn-light close" id="viewer-toggle"><i class="fas fa-times"></i></button>
+						<div class="input-group">
+							<a href="#" class="btn text-danger">
+								<i class="fa fa-heart"></i>Like
+							</a>
+							<a href="#" class="btn text-primary">
+								<i class="fa fa-download"></i>Download
+							</a>
+						</div>
+						<div class="border-top p-3">
+							<h4 class="fw-bolder">Download Sizes</h4>
+								<div class="form-group">
+									<button class="btn form-control btn-secondary mb-1">1024 X 720</button>
+									<button class="btn form-control btn-secondary mb-1">1360 X 1024</button>
+								</div>
+							</form>
+						</div>
+						<div class="border-top p-3">
+							<h4 class="fw-bolder">Categorys</h4>
+							<button class="btn btn-outline-primary mb-1">Cat 01</button>
+							<button class="btn btn-outline-secondary mb-1">Category 01</button>
+							<button class="btn btn-outline-success mb-1">Cat 01</button>
+							<button class="btn btn-outline-danger mb-1">Category</button>
+							<button class="btn btn-outline-warning mb-1">Cat 01</button>
+							<button class="btn btn-outline-info mb-1">Cat 01</button>
+							<button class="btn btn-outline-dark mb-1">Category</button>
+							<button class="btn btn-outline-success mb-1">Cat 01</button>
+						</div>
+					</div>
+				</dow>
+			</div>
+		</div>
+
+
+
+
+
+
+	</footer>
+
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<!-- <script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script> -->
+		<script src="./assets/js/bootstrap.min.js"></script>
+	</body>
+		<script>
+			$('.feed').click(function(event){
+				$('.viewer').toggleClass('d-none');
+				var img = $(this).find('.main-img').attr("src");
+				var proimg = $(this).find('.pro-img').attr("src");
+				var name = $(this).children().find('h6').text();
+				$('.viewer').children().find('.img').attr('src',img);
+				$('.viewer').children().find('.pro-img').attr('src',proimg);
+				$('.viewer').children().find('.username').text(name);
+			});
+			$('#viewer-toggle').click(function(event){
+				event.preventDefault();
+				$('.viewer').toggleClass('d-none');
+			});
+		</script>
+	<script
+		src="https://kit.fontawesome.com/8f19a7f20b.js"
+		crossorigin="anonymous"
+	></script>
+</html>
