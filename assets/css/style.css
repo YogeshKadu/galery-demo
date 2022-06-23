@@ -16,7 +16,7 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
-/* .social-nav:after, */
+.social-nav:after,
 .social-nav:before{
   content: '';
   border-right: 2px solid var(--bs-secondary);
