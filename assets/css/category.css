@@ -39,6 +39,7 @@ section.container .feed .profile{
 	width: 100%;
 	height: 100%;
 	bottom: 0;
+	left: 0;
 	display: inline;
 	color: #fff;
 	opacity: 0;
@@ -56,12 +57,13 @@ section.container .feed .profile .user{
 	padding: 20px;
 	background-image: linear-gradient(to bottom,rgba(0,0,0,0.5) 50%, rgba(0,0,0,0));
 	padding-bottom: 40px;
+	font-size: 12px;
 }
 section.container .feed .profile .user h6{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	/* padding: 10px; */
+	font-size: 12px;
 }
 section.container .feed .profile .user img{
 	width: 30px;
@@ -83,6 +85,7 @@ section.container .feed .profile .social .btn{
 	margin: 1px;
 	border-radius: 20px;
 	float: right;
+	font-size: 12px;
 }
 section.container .feed .profile .social .btn i{
 	/* color: #fff; */
